@@ -24,7 +24,7 @@ public class Banco {
         System.out.println("Saldo final de tarjetas:");
         for (Tarjeta t : tarjetas) {
             System.out.println("--------------------");
-            System.out.println("Tarjeta de " + t.getClass().getSimpleName() + ": " + t.consultarSaldo());
+            System.out.println("Tarjeta de " + t.getClass().getSimpleName() + " " + t.getTitular() + ": " + t.consultarSaldo());
             System.out.println("--------------------");
         }
     }

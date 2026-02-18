@@ -58,6 +58,7 @@ public class main {
                         addTarjeta();
                     }
                     break;
+                    
                 case 2:
                     pagar();
                     break;

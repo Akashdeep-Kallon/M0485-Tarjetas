@@ -23,6 +23,10 @@ public abstract class Tarjeta implements Operacion {
         return numero;
     }
 
+    public String getTitular() {
+        return titular;
+    }
+
     public void addSaldo(double monto) {
         this.saldo += monto;
     }
