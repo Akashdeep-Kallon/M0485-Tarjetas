@@ -68,6 +68,10 @@ public class main {
                 case 4:
                     System.out.println("Exit, programa finalizado.");
                     break;
+
+                default:
+                    System.err.print("Error, la opcion no existe.");
+                    break;
             }
         } while (opc != 4);
     }
@@ -97,6 +101,10 @@ public class main {
                         countC++;
                     }
                     System.out.print("Tarjeta de credito creado correctamente.");
+                    break;
+                default:
+                    System.err.print("Error, la opcion no existe.");
+                    addTarjeta();
                     break;
             }
         } else {
