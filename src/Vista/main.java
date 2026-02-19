@@ -79,12 +79,12 @@ public class main {
 
     public static void addTarjeta() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Introducir titular");
+        System.out.println("Introducir titular: ");
         String titular = sc.nextLine();
-        System.out.print("Introducir número de tarjeta");
+        System.out.println("Introducir número de tarjeta: ");
         String numero = comproveNumero();
         if (numero != null) {
-            System.out.print("Elegir tipo de tarjeta (debito o credito): ");
+            System.out.println("Elegir tipo de tarjeta (debito o credito): ");
             String tipoTarjeta = sc.nextLine();
             switch (tipoTarjeta.toLowerCase()) {
                 case "debito":
@@ -93,7 +93,7 @@ public class main {
                     if (countD < 2) {
                         countD++;
                     }
-                    System.out.print("Tarjeta de debito creado correctamente.");
+                    System.out.println("Tarjeta de debito creado correctamente.");
                     break;
                 case "credito":
                     Tarjeta credito = new TarjetaCredito(numero, titular);
@@ -101,23 +101,23 @@ public class main {
                     if (countC < 2) {
                         countC++;
                     }
-                    System.out.print("Tarjeta de credito creado correctamente.");
+                    System.out.println("Tarjeta de credito creado correctamente.");
                     break;
                 default:
-                    System.err.print("Error, la opcion no existe.");
+                    System.err.println("Error, la opcion no existe.");
                     addTarjeta();
                     break;
             }
         } else {
-            System.err.print("Error, ya existe el numero de tarjeta.");
+            System.err.println("Error, ya existe el numero de tarjeta.");
         }
     }
 
     public static void pagar() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Numero del titular de la tarjeta: ");
+        System.out.println("Numero del titular de la tarjeta: ");
         String numeroTitualar = comproveNumero();
-        System.out.print("Numero del destinatario de la tarjeta: ");
+        System.out.println("Numero del destinatario de la tarjeta: ");
         String numeroDestinatario = comproveNumero();
 
         if (numeroTitualar != null && numeroDestinatario != null) {
@@ -132,7 +132,7 @@ public class main {
                         System.out.println("Tarjeta de " + t.getClass().getSimpleName() + "-> Se ha descontado " + monto);
                         break;
                     } else {
-                        System.err.print("Error. El monto es mayor al saldo de la tarjeta.");
+                        System.err.println("Error. El monto es mayor al saldo de la tarjeta.");
                         break;
                     }
                 }
@@ -147,7 +147,7 @@ public class main {
                 }
             }
         } else {
-            System.err.print("Error. Una de las dos cuentas no existe.");
+            System.err.println("Error. Una de las dos cuentas no existe.");
         }
     }
 
