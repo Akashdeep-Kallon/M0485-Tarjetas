@@ -10,18 +10,20 @@ package Model;
  */
 public class TarjetaCredito extends Tarjeta {
 
+    private double limiteCredito = 2000;
+
     public TarjetaCredito(String numero, String titular) {
         super(numero, titular);
     }
 
     @Override
     public void pagar(double monto) {
-      this.saldo -= monto;
+        this.limiteCredito -= monto;
     }
 
     @Override
     public double consultarSaldo() {
-        return this.saldo;
+        return this.limiteCredito;
     }
 
 }
