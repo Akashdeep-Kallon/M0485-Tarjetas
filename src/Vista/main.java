@@ -50,7 +50,7 @@ public class main {
             switch (opc) {
                 case 1:
                     if (countD < 2 || countC < 2) {
-                        System.out.print("Debes de almenos crear dos tipo de tarjeta de cada tipo.");
+                        System.out.println("Debes de almenos crear dos tipo de tarjeta de cada tipo.");
                         while (countD < 2 || countC < 2) {
                             addTarjeta();
                         }
@@ -58,7 +58,7 @@ public class main {
                         addTarjeta();
                     }
                     break;
-                    
+
                 case 2:
                     pagar();
                     break;
@@ -71,7 +71,7 @@ public class main {
                     break;
 
                 default:
-                    System.err.print("Error, la opcion no existe.");
+                    System.err.println("Error, la opcion no existe.");
                     break;
             }
         } while (opc != 4);
